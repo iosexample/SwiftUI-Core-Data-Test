@@ -11,7 +11,7 @@ import CoreData
 
 struct ItemSelectionView : View {
     
-    @StateObject private var dataSource = CoreDataDataSource<Item>()
+    @ObservedObject private var dataSource = CoreDataDataSource<Item>()
     @ObservedObject private var selection: ItemSelectionManager = ItemSelectionManager()
 //    @ObservedObject private var selection: ItemSelectionManager = ItemSelectionManager(allowsMultipleSelections: false)
 

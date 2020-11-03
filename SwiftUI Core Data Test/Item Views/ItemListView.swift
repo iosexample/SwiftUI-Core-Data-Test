@@ -11,7 +11,7 @@ import CoreData
 
 struct ItemListView : View {
     
-    @StateObject private var dataSource = CoreDataDataSource<Item>()
+    @ObservedObject private var dataSource = CoreDataDataSource<Item>()
     @State private var sortAscending: Bool = true
     
     @State private var showingItemAddView: Bool = false

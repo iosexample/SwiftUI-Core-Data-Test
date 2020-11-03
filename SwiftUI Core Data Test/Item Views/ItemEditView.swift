@@ -12,7 +12,7 @@ struct ItemEditView : View {
     
     var item: Item
     
-    @StateObject private var dataSource = CoreDataDataSource<Attribute>(predicateKey: "item")
+    @ObservedObject private var dataSource = CoreDataDataSource<Attribute>(predicateKey: "item")
     
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
 

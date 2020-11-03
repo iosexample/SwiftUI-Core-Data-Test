@@ -11,7 +11,7 @@ import CoreData
 
 struct AttributesGroupedView: View {
     
-    @StateObject private var dataSource = CoreDataDataSource<Attribute>(sortKey1: "item.order",
+    @ObservedObject private var dataSource = CoreDataDataSource<Attribute>(sortKey1: "item.order",
                                                                    sortKey2: "order",
                                                                    sectionNameKeyPath: "item.name")
     
